@@ -7,7 +7,7 @@
    - Tickets and purchased snacks would then be sent to the email of the person who purchased them (or put on a page where they can view their QR codes).
    - They can redeem their QR codes when they show up to the theatre.
 ## I will be doing this project individually.
-## Feature List
+## Feature List:
    - The website will need a front page that displays the movies that are currently in the theatre.
    - There will be a page that shows upcoming movies.
    - There will be a page that allows the user to view details of any movie they select.
@@ -17,7 +17,7 @@
    - It keeps track of user accounts for the purpose of allowing users to purchase tickets and snacks.
    - The database will need to keep track of which tickets have been purchased.
    - It will also need the ability to send emails to users when they buy tickets/snacks that include redeemable QR codes (or it will be a page where they can view their QR codes).
-## Things I will need to accomplish.
+## Things I will need to accomplish:
    - I always end up creating very sterile websites when I make them for projects, so I wanted to make one that is a little more fun for once.
    - For this website I would need to do that, since movie theatres almost always go for a more upbeat "popcorn" kind of vibe. That would be an interesting new challenge.
    - I would also need to create an interactive UI to showcase the seats that are available in a theatre, which would have to be more difficult than any UI I've made in the past.

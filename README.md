@@ -30,14 +30,16 @@
     - [ ] Docker and Kubernetes are setup and the site is visitable on duckdns.
     - [ ] Includes having a user see movies from the database. 
 - [ ] Nov 13
-    - [ ] 
+    - [ ] Users can view the movies that are currently in the theatre, as well as the details of those movies.
+    - [ ] Users can also view the upcoming movies and when they will visit the theatre.
 - [ ] Nov 16
-    - [ ] 
+    - [ ] User can purchase tickets from the interactive UI in each theatre available.
+    - [ ] User will not be able to purchase tickets that are already purchased. Those UI elements will be disabled.
 - [ ] Nov 20
-    - [ ] 
+    - [ ] Users can view the available snacks and purchase them as well. 
 - [ ] Nov 23
-    - [ ] 
+    - [ ] User can view their QR codes on the profile after purchasing tickets/snacks.
 - [ ] Nov 26
-    - [ ] 
+    - [ ] Overall UI polish/adding extra features/catchup if needed. 
 - [ ] Dec 4
-    - [ ] 
+    - [ ] User gets sent an email with the QR codes for their order instead of the page that shows them their QR codes.

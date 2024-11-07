@@ -48,7 +48,7 @@
 | Points | Section    | Requirement                                                      |
 | ------ | -----      | ---------------------------------------------------------------- |
 | 00/20    | General    | Professional, organized and smooth experience
-| 00/30    | Scope      | Is 2|3 times larger than Inventory Management
+| 00/30    | Scope      | Is 2 to 3 times larger than Inventory Management
 | 00/5     | Experience | All experiences mobile friendly
 | 00/5     | Experience | 3 instances where elements reorder themselves on smaller screens
 | 00/5     | Technology | Use local storage

@@ -24,8 +24,8 @@
    - Lastly, I would also have to send emails to users when they purchase tickets/snacks as well as generate QR codes which isn't something I've done using React before. 
 
 ## Goals by Week
-- [ ] Nov 6
-    - [ ] Users can login using Authentication.
+- [X] Nov 6
+    - [X] Users can login using Authentication.
 - [ ] Nov 9
     - [ ] Docker and Kubernetes are setup and the site is visitable on duckdns.
     - [ ] Includes having a user see movies from the database. 

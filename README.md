@@ -48,10 +48,10 @@
 | Points | Section    | Requirement                                                      |
 | ------ | -----      | ---------------------------------------------------------------- |
 | 00/20    | General    | Professional, organized and smooth experience
-| 00/30    | Scope      | is 2|3 times larger than Inventory Management
-| 00/5     | Experience | all experiences mobile friendly
+| 00/30    | Scope      | Is 2|3 times larger than Inventory Management
+| 00/5     | Experience | All experiences mobile friendly
 | 00/5     | Experience | 3 instances where elements reorder themselves on smaller screens
-| 00/5     | Technology | use local storage
+| 00/5     | Technology | Use local storage
 | 00/5     | Technology | Client side state stores (e.g. tanstack query or context)
 | 00/5     | Technology | Toasts / global notifications or alerts
 | 00/5     | Technology | Error handling (both on api requests and render errors)
@@ -59,9 +59,9 @@
 | 00/5     | Technology | Developer type helping (typescript)
 | 00/5     | Technology | 10+ pages or views
 | 00/5     | Technology | CI/CD pipeline
-| 00/5     | Technology | tests run in pipeline, pipeline aborts if they fail
+| 00/5     | Technology | Tests run in pipeline, pipeline aborts if they fail
 | 00/5     | Technology | linting in pipeline
 | 00/9     | Technology | 3+ generic form input components
 | 00/12    | Technology | 4+ generic layout components
-| 10/10    | Technology | authentication and user account support
-| 00/5     | Technology | authorized pages and public pages
+| 10/10    | Technology | Authentication and user account support
+| 00/5     | Technology | Authorized pages and public pages

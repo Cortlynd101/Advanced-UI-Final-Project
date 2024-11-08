@@ -32,4 +32,4 @@ spec:
         - name: VITE_REDIRECT_URI
           value: https://cort-final.duckdns.org/
         - name: VITE_API_URL
-          value: https://api.cort-next.duckdns.org/
+          value: https://api.cort-final.duckdns.org/

@@ -31,5 +31,5 @@ spec:
           #   value: db
           - name: VITE_REDIRECT_URI
             value: https://cort-final.duckdns.org/
-          # - name: VITE_API_URL
-          #   value: https://api.cort-final.duckdns.org/
+          - name: VITE_API_URL
+            value: https://api.cort-final.duckdns.org/ 

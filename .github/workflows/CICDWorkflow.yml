@@ -18,11 +18,11 @@ jobs:
 
       - name: Build image
         run: |
-          docker build -t cortlynd101/cort-react:${{ github.run_number }} .
+          docker build -t cortlynd101/cort-final:${{ github.run_number }} .
 
       - name: Push image
         run: |
-          docker push cortlynd101/cort-react:${{ github.run_number }}
+          docker push cortlynd101/cort-final:${{ github.run_number }}
 
       - name: Deploy
         run: | 

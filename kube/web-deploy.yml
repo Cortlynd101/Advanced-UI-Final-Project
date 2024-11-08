@@ -17,19 +17,6 @@ spec:
     spec:
       containers:
       - name: react-vite-container
-        image: cortlynd101/cort-react:${IMAGE_TAG}
+        image: cortlynd101/cort-final:${IMAGE_TAG}
         ports:
         - containerPort: 80
-        # readinessProbe:
-        #   httpGet:
-        #     path: /
-        #     port: 8080
-        #   initialDelaySeconds: 5
-        #   periodSeconds: 10
-        #   timeoutSeconds: 3
-        # livenessProbe:
-        #   httpGet:
-        #     path: /
-        #     port: 8080
-        #   initialDelaySeconds: 15
-        #   periodSeconds: 20

@@ -8,6 +8,10 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
+      - name: Test secrets
+        run: |
+          echo "DOCKER_USERNAME=${{ secrets.DOCKER_USERNAME }}"
+          echo "DOCKER_PASSWORD=${{ secrets.DOCKER_PASSWORD }}"
       - name: checkout-repo
         uses: actions/checkout@v4
       - name: Log in to Docker Hub

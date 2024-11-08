@@ -26,8 +26,8 @@
 ## Goals by Week
 - [X] Nov 6
     - [X] Users can login using Authentication.
-- [ ] Nov 9
-    - [ ] Docker and Kubernetes are setup and the site is visitable on duckdns.
+- [X] Nov 9
+    - [X] Docker and Kubernetes are setup and the site is visitable on duckdns.
     - [ ] Includes having a user see movies from the database. 
 - [ ] Nov 13
     - [ ] Users can view the movies that are currently in the theatre, as well as the details of those movies.

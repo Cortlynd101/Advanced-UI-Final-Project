@@ -20,16 +20,3 @@ spec:
         image: cortlynd101/cort-final:${IMAGE_TAG}
         ports:
         - containerPort: 80
-        env:
-          # - name: POSTGRES_HOST
-          #   value: next-db-service
-          # - name: POSTGRES_USER
-          #   value: test-user
-          # - name: POSTGRES_PASSWORD
-          #   value: test-password
-          # - name: POSTGRES_DB
-          #   value: db
-          - name: VITE_REDIRECT_URI
-            value: https://cort-final.duckdns.org/
-          - name: VITE_API_URL
-            value: https://api.cort-final.duckdns.org/ 

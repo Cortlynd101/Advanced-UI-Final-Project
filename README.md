@@ -58,7 +58,7 @@
 | 00/5     | Technology | Network Calls that read and write data
 | 00/5     | Technology | Developer type helping (typescript)
 | 00/5     | Technology | 10+ pages or views
-| 00/5     | Technology | CI/CD pipeline
+| 05/5     | Technology | CI/CD pipeline
 | 00/5     | Technology | Tests run in pipeline, pipeline aborts if they fail
 | 00/5     | Technology | linting in pipeline
 | 00/9     | Technology | 3+ generic form input components

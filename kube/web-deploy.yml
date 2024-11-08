@@ -14,7 +14,7 @@ spec:
     metadata:
       labels: 
         app: react-vite-app
-    spec: 
+    spec:  
       containers:
       - name: react-vite-container
         image: cortlynd101/cort-final:${IMAGE_TAG}

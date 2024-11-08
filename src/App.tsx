@@ -12,8 +12,11 @@ function App() {
   const auth = useAuth();
   useEffect(() => {
     callAuthApiEndpoint(auth.user?.id_token ?? "");
-    callPublicApiEndpoint();
   }, [auth.user?.id_token]);
+
+  useEffect(() => {
+    callPublicApiEndpoint();
+  });
 
   return (
     <>

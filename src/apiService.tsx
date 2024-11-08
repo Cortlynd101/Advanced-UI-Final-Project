@@ -1,9 +1,11 @@
 import axios from "axios"; //npm i axios
-const baseUrl = "http://localhost:5084";
+const uri = import.meta.env.VITE_API_URL;
+if (!uri) console.log("VITE_API_URL is not set");
+else console.log("VITE_API_URL is: " + { uri });
+
 export const callAuthApiEndpoint = async (id_token: string) => {
 	try {
-    const url = baseUrl + "/";
-    const response = await axios.get(url, {
+    const response = await axios.get(`${uri}`, {
       headers: {
         Authorization: `Bearer ${id_token}`,
       },
@@ -17,8 +19,7 @@ export const callAuthApiEndpoint = async (id_token: string) => {
 
 export const callPublicApiEndpoint = async () => {
 	try {
-		const url = baseUrl + "/";
-		const response = await axios.get(url);
+		const response = await axios.get(`${uri}`);
 		console.log("data from public api", response.data);
 		return response.data;
 	} 

@@ -14,6 +14,12 @@ const oidcConfig: AuthProviderProps = {
   client_id: "cort-id",
   redirect_uri: `${uri}`,
   // ...
+  onSigninCallback: async (user) => {
+    console.log("called back!");
+    const newUrl = window.location.href.split("?")[0];
+    window.history.replaceState({}, document.title, newUrl);
+    document.cookie = `jwt_token=${user?.id_token}`;
+  },
 };
 
 createRoot(document.getElementById('root')!).render(

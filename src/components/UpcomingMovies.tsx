@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useMoviesApiContext } from "../api-context/useMoviesApiContext";
 
-function Details() {
+function UpcomingMovies() {
   const { moviesList, selectedMovie, setSelectedMovie } = useMoviesApiContext();
   let { Id } = useParams();
   useEffect(() => {
@@ -36,4 +36,4 @@ function Details() {
   );
 }
 
-export default Details;
+export default UpcomingMovies;

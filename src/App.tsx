@@ -7,6 +7,7 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './components/Home'
 import NavBar from './components/NavBar'
 import Details from './components/Details'
+import UpcomingMovies from './components/UpcomingMovies'
 
 function App() {
   const auth = useAuth();
@@ -18,9 +19,9 @@ function App() {
     callPublicApiEndpoint();
   });
 
-  const causeError = () => {
-    throw new Error("Error!! You threw an error by clicking that button!!");
-  };
+  // const causeError = () => {
+  //   throw new Error("Error!! You threw an error by clicking that button!!");
+  // };
 
   return (
     <>
@@ -31,16 +32,17 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/details/:id" element={<Details />} />
+        <Route path="/upcoming-movies" element={<UpcomingMovies />} />
         {/* <Route path="/modify/:id" element={<ModifyGame />} /> */}
         {/* <Route path="/AddGame" element={<AddGame />} /> */}
         {/* <Route path="/image-page" element={<ImagePage />} /> */}
       </Routes>
-      <div className="main">
+      {/* <div className="main">
         <h1>Click to cause an error: </h1>
         <button className="btn btn-danger" onClick={causeError}>
           Error!
         </button>
-      </div>
+      </div> */}
     </>
   );
 }

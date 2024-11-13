@@ -6,7 +6,7 @@ import "bootstrap";
 import { AuthProvider, AuthProviderProps } from 'react-oidc-context';
 import { BrowserRouter } from 'react-router-dom';
 // import { ErrorBoundary } from 'react-error-boundary';
-import { GamesApiContextProvider } from './api-context/GamesApiContextProvider.tsx';
+import { MoviesApiContextProvider } from './api-context/MoviesApiContextProvider.tsx';
 
 const uri = import.meta.env.VITE_REDIRECT_URI;
 
@@ -30,11 +30,11 @@ createRoot(document.getElementById('root')!).render(
   <BrowserRouter>
     {/* <ErrorBoundary fallback={<div>Something went wrong</div>}> */}
       <AuthProvider {...oidcConfig}>
-      <GamesApiContextProvider>
+      <MoviesApiContextProvider>
         <StrictMode>
           <App />
         </StrictMode>
-        </GamesApiContextProvider>
+        </MoviesApiContextProvider>
       </AuthProvider>
     {/* </ErrorBoundary> */}
   </BrowserRouter>

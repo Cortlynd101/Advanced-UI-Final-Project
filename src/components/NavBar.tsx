@@ -25,24 +25,28 @@ function NavBar() {
               <br></br>
               <NavLink to={"/details/" + 0}>
                 {" "}
-                Details for the default first game
+                Details for the default first movie
               </NavLink>
             </div>
             <div className="col">
+              <FileEarmarkFill className="mx-2" />
+              <NavLink to={"upcoming-movies"}>View the upcoming movies</NavLink>
+            </div>
+            {/* <div className="col">
               <PlusSquareFill className="mx-2" />
               <br></br>
-              <NavLink to="/AddGame">Page to add a game</NavLink>
+              <NavLink to="/AddMovie">Page to add a movie</NavLink>
             </div>
             <div className="col">
               <PencilSquare className="mx-2" />
               <br></br>
-              <NavLink to={"/modify/" + 0}>Page to modify or delete a game</NavLink>
+              <NavLink to={"/modify/" + 0}>Page to modify or delete a movie</NavLink>
             </div>
             <div className="col">
               <FileEarmarkFill className="mx-2" />
               <br></br>
-              <NavLink to={"/image-page/"}>Page to view game images</NavLink>
-            </div>
+              <NavLink to={"/image-page/"}>Page to view movie images</NavLink>
+            </div> */}
           </div>
         </div>
       ) : (
@@ -54,20 +58,24 @@ function NavBar() {
             </div>
             <div className="col">
               <ClipboardDataFill className="mx-2" />
-              <NavLink to={"details/" + 0}>Details for the default first game</NavLink>
-            </div>
-            <div className="col">
-              <PlusSquareFill className="mx-2" />
-              <NavLink to="AddGame">Page to add a game</NavLink>
-            </div>
-            <div className="col">
-              <PencilSquare className="mx-2" />
-              <NavLink to={"modify/" + 0}>Page to modify or delete a game</NavLink>
+              <NavLink to={"details/" + 0}>Details for the default first movie</NavLink>
             </div>
             <div className="col">
               <FileEarmarkFill className="mx-2" />
-              <NavLink to={"image-page/"}>Page to view game images</NavLink>
+              <NavLink to={"upcoming-movies"}>View the upcoming movies</NavLink>
             </div>
+            {/* <div className="col">
+              <PlusSquareFill className="mx-2" />
+              <NavLink to="AddMovie">Page to add a movie</NavLink>
+            </div>
+            <div className="col">
+              <PencilSquare className="mx-2" />
+              <NavLink to={"modify/" + 0}>Page to modify or delete a movie</NavLink>
+            </div>
+            <div className="col">
+              <FileEarmarkFill className="mx-2" />
+              <NavLink to={"image-page/"}>Page to view movie images</NavLink>
+            </div> */}
           </div>
         </div>
       )}

@@ -1,38 +1,38 @@
 import "../App.css";
 import { Link } from "react-router-dom";
-import { useGamesApiContext } from "../api-context/useGamesApiContext";
+import { useMoviesApiContext } from "../api-context/useMoviesApiContext";
 import Loading from "./Loading";
 import Toast from "./Toast";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 function Home() {
-  const { gamesList, selectedGame, setSelectedGame } = useGamesApiContext(); // isLoading
+  const { moviesList, selectedMovie, setSelectedMovie } = useMoviesApiContext(); // isLoading
     let isLoading = true;
-    useEffect(() => {
-      // setTimeout(() => {
-      //   console.log("Hello, World!");
-      // }, 2000);
-      // isLoading = false;
-    });
+    // useEffect(() => {
+    //   // setTimeout(() => {
+    //   //   console.log("Hello, World!");
+    //   // }, 2000);
+    //   // isLoading = false;
+    // });
   return (
     <>
       <div className="main">
         <h1>Welcome to the home page </h1>
-        <h1>List of Games: </h1>
+        <h1>List of Movies: </h1>
         <div>
           {!isLoading && <Loading />}
           {isLoading && (
             <div>
-              {gamesList.map((game) => (
+              {moviesList.map((movie) => (
                 <div
                   className=""
-                  key={game.id}
+                  key={movie.id}
                   style={{ cursor: "default" }}
-                  onClick={() => setSelectedGame(game)}
+                  onClick={() => setSelectedMovie(movie)}
                 >
                   <h2>
-                    {selectedGame?.id == game.id ? "✓ " : ""}
-                    {game.name}
+                    {selectedMovie?.id == movie.id ? "✓ " : ""}
+                    {movie.name}
                   </h2>
                 </div>
               ))}
@@ -41,15 +41,15 @@ function Home() {
         </div>
 
         <div className="row">
-          <Link to={"details/" + selectedGame?.id}>
+          <Link to={"details/" + selectedMovie?.id}>
             Click to view our the details of the selected item. Item:{" "}
-            {selectedGame?.id}.
+            {selectedMovie?.id}.
           </Link>
         </div>
         <div className="row">
-          <Link to={"modify/" + selectedGame?.id}>
+          <Link to={"modify/" + selectedMovie?.id}>
             Click to modify or delete the selected item. Item:{" "}
-            {selectedGame?.id}.
+            {selectedMovie?.id}.
           </Link>
         </div>
       </div>

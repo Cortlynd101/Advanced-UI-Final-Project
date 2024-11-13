@@ -60,7 +60,7 @@
 | 00/5     | Technology | 10+ pages or views
 | 05/5     | Technology | CI/CD pipeline
 | 00/5     | Technology | Tests run in pipeline, pipeline aborts if they fail
-| 00/5     | Technology | linting in pipeline
+| 05/5     | Technology | linting in pipeline
 | 00/9     | Technology | 3+ generic form input components
 | 00/12    | Technology | 4+ generic layout components
 | 10/10    | Technology | Authentication and user account support

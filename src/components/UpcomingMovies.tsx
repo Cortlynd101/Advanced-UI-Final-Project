@@ -1,36 +1,41 @@
-import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useMoviesApiContext } from "../api-context/useMoviesApiContext";
+import Loading from "./Loading";
 
 function UpcomingMovies() {
-  const { moviesList, selectedMovie, setSelectedMovie } = useMoviesApiContext();
-  const { Id } = useParams();
-  useEffect(() => {
-    {
-      moviesList.map((movie) => (
-        <div
-          className=""
-          key={movie.id}
-          style={{ cursor: "default" }}
-          onClick={() => setSelectedMovie(movie)}
-        >
-          <h2>
-            {selectedMovie?.id == movie.id ? "✓ " : ""}
-            {movie.name}
-          </h2>
-        </div>
-      ));
-    }
-    console.log(`/details/${Id}`);
-  }, [Id, moviesList, selectedMovie?.id, setSelectedMovie]);
+  const { moviesList, selectedMovie, setSelectedMovie } = useMoviesApiContext(); // isLoading
+  const isLoading = false;
   return (
     <>
       <div className="main">
-        <h1>Details for movie id {selectedMovie?.id}.</h1>
-        <p>Name: {selectedMovie?.name}</p>
-        <p>Genre: {selectedMovie?.genre}</p>
-        <p>Runtime: {selectedMovie?.runtime}</p>
-        <p>Rating: {selectedMovie?.rating}</p>
+        <h1>Upcoming Movies: </h1>
+        <div>
+          {isLoading && <Loading />}
+          {!isLoading && (
+            <div>
+              {moviesList.map((movie) => (
+                <div
+                  className=""
+                  key={movie.id}
+                  style={{ cursor: "default" }}
+                  onClick={() => setSelectedMovie(movie)}
+                >
+                  <h2>
+                    {selectedMovie?.id == movie.id ? "✓ " : ""}
+                    {movie.name}
+                  </h2>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+
+        <div className="row">
+          <Link to={"details/" + selectedMovie?.id}>
+            Click to view our the details of the selected item. Item:{" "}
+            {selectedMovie?.id}.
+          </Link>
+        </div>
       </div>
     </>
   );

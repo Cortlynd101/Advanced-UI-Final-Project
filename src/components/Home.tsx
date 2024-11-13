@@ -8,12 +8,6 @@ import Toast from "./Toast";
 function Home() {
   const { moviesList, selectedMovie, setSelectedMovie } = useMoviesApiContext(); // isLoading
     const isLoading = false;
-    // useEffect(() => {
-    //   // setTimeout(() => {
-    //   //   console.log("Hello, World!");
-    //   // }, 2000);
-    //   // isLoading = false;
-    // });
   return (
     <>
       <div className="main">
@@ -46,12 +40,12 @@ function Home() {
             {selectedMovie?.id}.
           </Link>
         </div>
-        <div className="row">
+        {/* <div className="row">
           <Link to={"modify/" + selectedMovie?.id}>
             Click to modify or delete the selected item. Item:{" "}
             {selectedMovie?.id}.
           </Link>
-        </div>
+        </div> */}
       </div>
       <Toast></Toast>
     </>

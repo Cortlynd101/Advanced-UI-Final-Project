@@ -1,4 +1,4 @@
-FROM node:20 as build
+FROM node:20 AS build
  
 WORKDIR /app
 COPY package*.json ./
@@ -9,7 +9,6 @@ RUN npm install sass-embedded
 RUN npm install
 COPY . .
 
-# ENV VITE_API_URL http://api.cort-final.duckdns.org
 ENV VITE_REDIRECT_URI=https://cort-final.duckdns.org/
 ENV VITE_API_URL=https://api.cort-final.duckdns.org/
 RUN npm run build

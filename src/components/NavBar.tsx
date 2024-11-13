@@ -3,8 +3,8 @@ import {
   FileEarmarkFill,
   HouseFill,
   ClipboardDataFill,
-  PlusSquareFill,
-  PencilSquare,
+  // PlusSquareFill,
+  // PencilSquare,
 } from "react-bootstrap-icons";
 import { useMediaQuery } from "react-responsive";
 

@@ -27,10 +27,10 @@ function Details() {
     <>
       <div className="main">
         <h1>Details for movie id {selectedMovie?.id}.</h1>
-        <p>Movie's name: {selectedMovie?.name}</p>
-        <p>Movie's main genre: {selectedMovie?.genre}</p>
-        <p>Hours played: {selectedMovie?.hoursPlayed} hours.</p>
-        <p>Movie's length in hours: {selectedMovie?.howLongToBeat} hours.</p>
+        <p>Name: {selectedMovie?.name}</p>
+        <p>Genre: {selectedMovie?.genre}</p>
+        <p>Runtime: {selectedMovie?.runtime}</p>
+        <p>Rating: {selectedMovie?.rating}</p>
       </div>
     </>
   );

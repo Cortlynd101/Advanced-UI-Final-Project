@@ -4,8 +4,8 @@ export interface ApiMovie {
   name: string;
   id: string;
   genre: string;
-  hoursPlayed: string;
-  howLongToBeat: string;
+  runtime: string;
+  rating: string;
 }
 
 export interface MoviesApiContextInterface {

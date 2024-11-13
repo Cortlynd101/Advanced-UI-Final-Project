@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useMoviesApiContext } from "../api-context/useMoviesApiContext";
 import Loading from "./Loading";
 import Toast from "./Toast";
-// import { useEffect } from "react";
 
 function Home() {
   const { moviesList, selectedMovie, setSelectedMovie } = useMoviesApiContext(); // isLoading
@@ -40,12 +39,6 @@ function Home() {
             {selectedMovie?.id}.
           </Link>
         </div>
-        {/* <div className="row">
-          <Link to={"modify/" + selectedMovie?.id}>
-            Click to modify or delete the selected item. Item:{" "}
-            {selectedMovie?.id}.
-          </Link>
-        </div> */}
       </div>
       <Toast></Toast>
     </>

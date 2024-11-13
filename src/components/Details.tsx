@@ -4,7 +4,7 @@ import { useMoviesApiContext } from "../api-context/useMoviesApiContext";
 
 function Details() {
   const { moviesList, selectedMovie, setSelectedMovie } = useMoviesApiContext();
-  let { Id } = useParams();
+  const { Id } = useParams();
   useEffect(() => {
     {
       moviesList.map((movie) => (
@@ -22,7 +22,7 @@ function Details() {
       ));
     }
     console.log(`/details/${Id}`);
-  }, []);
+  }, [Id, moviesList, selectedMovie?.id, setSelectedMovie]);
   return (
     <>
       <div className="main">

@@ -7,7 +7,7 @@ import Toast from "./Toast";
 
 function Home() {
   const { moviesList, selectedMovie, setSelectedMovie } = useMoviesApiContext(); // isLoading
-    let isLoading = true;
+    const isLoading = false;
     // useEffect(() => {
     //   // setTimeout(() => {
     //   //   console.log("Hello, World!");
@@ -20,8 +20,8 @@ function Home() {
         <h1>Welcome to the home page </h1>
         <h1>List of Movies: </h1>
         <div>
-          {!isLoading && <Loading />}
-          {isLoading && (
+          {isLoading && <Loading />}
+          {!isLoading && (
             <div>
               {moviesList.map((movie) => (
                 <div

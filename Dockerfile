@@ -5,6 +5,7 @@ COPY package*.json ./
 RUN npm install react-router-dom
 # RUN npm install react-bootstrap-icons
 # RUN npm install react-router-dom
+RUN npm install sass-embedded
 RUN npm install
 COPY . .
 

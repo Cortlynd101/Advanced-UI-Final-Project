@@ -3,6 +3,8 @@ FROM node:20 as build
 WORKDIR /app
 COPY package*.json ./
 RUN npm install react-router-dom
+RUN npm install react-bootstrap-icons
+# RUN npm install react-router-dom
 RUN npm install
 COPY . .
 

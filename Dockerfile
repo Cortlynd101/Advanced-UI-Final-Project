@@ -2,6 +2,7 @@ FROM node:20 as build
  
 WORKDIR /app
 COPY package*.json ./
+RUN npm insall react-router-dom
 RUN npm install
 COPY . .
 

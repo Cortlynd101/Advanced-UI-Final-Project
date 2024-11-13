@@ -26,8 +26,8 @@
 ## Goals by Week
 - [X] Nov 6
     - [X] Users can login using Authentication.
-- [ ] Nov 9
-    - [ ] Docker and Kubernetes are setup and the site is visitable on duckdns.
+- [X] Nov 9
+    - [X] Docker and Kubernetes are setup and the site is visitable on duckdns.
     - [ ] Includes having a user see movies from the database. 
 - [ ] Nov 13
     - [ ] Users can view the movies that are currently in the theatre, as well as the details of those movies.
@@ -58,7 +58,7 @@
 | 00/5     | Technology | Network Calls that read and write data
 | 00/5     | Technology | Developer type helping (typescript)
 | 00/5     | Technology | 10+ pages or views
-| 00/5     | Technology | CI/CD pipeline
+| 05/5     | Technology | CI/CD pipeline
 | 00/5     | Technology | Tests run in pipeline, pipeline aborts if they fail
 | 00/5     | Technology | linting in pipeline
 | 00/9     | Technology | 3+ generic form input components

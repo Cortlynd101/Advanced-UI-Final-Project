@@ -1,8 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
 import App from './App.tsx'
+import "./custom.scss";
+import "bootstrap";
 import { AuthProvider, AuthProviderProps } from 'react-oidc-context';
+import { BrowserRouter } from 'react-router-dom';
+// import { ErrorBoundary } from 'react-error-boundary';
+import { GamesApiContextProvider } from './api-context/GamesApiContextProvider.tsx';
 
 const uri = import.meta.env.VITE_REDIRECT_URI;
 
@@ -23,9 +27,15 @@ const oidcConfig: AuthProviderProps = {
 };
 
 createRoot(document.getElementById('root')!).render(
-  <AuthProvider {...oidcConfig}>
-    <StrictMode>
-      <App />
-    </StrictMode>,
-  </AuthProvider>
+  <BrowserRouter>
+    {/* <ErrorBoundary fallback={<div>Something went wrong</div>}> */}
+      <AuthProvider {...oidcConfig}>
+      <GamesApiContextProvider>
+        <StrictMode>
+          <App />
+        </StrictMode>
+        </GamesApiContextProvider>
+      </AuthProvider>
+    {/* </ErrorBoundary> */}
+  </BrowserRouter>
 )

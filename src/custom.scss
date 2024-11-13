@@ -1,0 +1,60 @@
+$primary: #003057;
+$info: #429feb;
+$success: hsl(139, 75%, 24%);
+$warning: #f3f72c;
+$danger: #b80404;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+$font-family-base: "Roboto Mono";
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+
+$custom-colors: (
+  "alexcolor": hsl(166, 56%, 28%)
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import "bootstrap/scss/bootstrap";
+
+:root {
+  font-family: "Roboto Mono", monospace !important;
+};
+
+.top {
+  background-color: $primary;
+  color: info;
+};
+
+@keyframes my-animation {
+  0%   {background-color:#003057; color: whitesmoke; left:0px; top:0px; transform:rotate(90deg); }
+  25%  {background-color:#429feb; color: black; left:200px; top:0px; transform:rotate(180deg);}
+  50%  {background-color:#003057; color: whitesmoke; left:200px; top:200px; transform:rotate(270deg);}
+  75%  {background-color:#429feb; color: black; left:0px; top:200px; transform:rotate(360deg);}
+  100% {background-color:#003057; color: whitesmoke; left:0px; top:0px; transform:rotate(0deg);}
+}
+
+.animation {
+  color: whitesmoke;
+  text-align: center;
+  width: 300px;
+  height: 100px;
+  position: relative;
+  background-color: #003057;
+  border-radius: 2.5em;
+  animation-name: my-animation;
+  animation-duration: 4s;
+  align-content: center;
+}
+
+.picture {
+  max-width: 500px;
+  height: auto;
+  
+  @media screen and (max-width: 425px) {
+    max-width: 150px;
+    height: auto;
+  }
+}

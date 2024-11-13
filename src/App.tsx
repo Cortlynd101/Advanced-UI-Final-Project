@@ -1,14 +1,14 @@
-import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useEffect } from 'react'
 import './App.css'
 import LogInButton from './components/LogInButton'
 import { callAuthApiEndpoint, callPublicApiEndpoint } from './apiService'
 import { useAuth } from 'react-oidc-context'
+import { Route, Routes } from 'react-router-dom'
+import Home from './components/Home'
+import NavBar from './components/NavBar'
+import Details from './components/Details'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   const auth = useAuth();
   useEffect(() => {
     callAuthApiEndpoint(auth.user?.id_token ?? "");
@@ -18,31 +18,31 @@ function App() {
     callPublicApiEndpoint();
   });
 
+  const causeError = () => {
+    throw new Error("Error!! You threw an error by clicking that button!!");
+  };
+
   return (
     <>
-    <LogInButton></LogInButton>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="main">
+        <NavBar></NavBar>
+        <LogInButton></LogInButton>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/details/:id" element={<Details />} />
+        {/* <Route path="/modify/:id" element={<ModifyGame />} /> */}
+        {/* <Route path="/AddGame" element={<AddGame />} /> */}
+        {/* <Route path="/image-page" element={<ImagePage />} /> */}
+      </Routes>
+      <div className="main">
+        <h1>Click to cause an error: </h1>
+        <button className="btn btn-danger" onClick={causeError}>
+          Error!
         </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
 export default App

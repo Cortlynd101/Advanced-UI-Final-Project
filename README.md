@@ -28,10 +28,11 @@
     - [X] Users can login using Authentication.
 - [X] Nov 9
     - [X] Docker and Kubernetes are setup and the site is visitable on duckdns.
-    - [ ] Includes having a user see movies from the database. 
+    - [X] Includes having a user see movies from the database. 
 - [ ] Nov 13
-    - [ ] Users can view the movies that are currently in the theatre, as well as the details of those movies.
-    - [ ] Users can also view the upcoming movies and when they will visit the theatre.
+    - [X] Users can view the movies that are currently in the theatre, as well as the details of those movies.
+    - [X] 1/2 Users can also view the upcoming movies and when they will visit the theatre.
+    - [ ] 2/2 Users can also view the upcoming movies and when they will visit the theatre (second part because its not all the way done).
 - [ ] Nov 16
     - [ ] User can purchase tickets from the interactive UI in each theatre available.
     - [ ] User will not be able to purchase tickets that are already purchased. Those UI elements will be disabled.
@@ -47,17 +48,17 @@
 ## Rubric
 | Points | Section    | Requirement                                                      |
 | ------ | -----      | ---------------------------------------------------------------- |
-| 00/20    | General    | Professional, organized and smooth experience
-| 00/30    | Scope      | Is 2 to 3 times larger than Inventory Management
-| 00/5     | Experience | All experiences mobile friendly
-| 00/5     | Experience | 3 instances where elements reorder themselves on smaller screens
+| 04/20    | General    | Professional, organized and smooth experience
+| 05/30    | Scope      | Is 2 to 3 times larger than Inventory Management
+| 04/5     | Experience | All experiences mobile friendly
+| 02/5     | Experience | 3 instances where elements reorder themselves on smaller screens
 | 00/5     | Technology | Use local storage
 | 00/5     | Technology | Client side state stores (e.g. tanstack query or context)
-| 00/5     | Technology | Toasts / global notifications or alerts
-| 00/5     | Technology | Error handling (both on api requests and render errors)
-| 00/5     | Technology | Network Calls that read and write data
+| 02/5     | Technology | Toasts / global notifications or alerts
+| 03/5     | Technology | Error handling (both on api requests and render errors)
+| 02/5     | Technology | Network Calls that read and write data
 | 00/5     | Technology | Developer type helping (typescript)
-| 00/5     | Technology | 10+ pages or views
+| 02/5     | Technology | 10+ pages or views
 | 05/5     | Technology | CI/CD pipeline
 | 00/5     | Technology | Tests run in pipeline, pipeline aborts if they fail
 | 05/5     | Technology | linting in pipeline

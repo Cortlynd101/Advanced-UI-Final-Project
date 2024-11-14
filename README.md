@@ -29,7 +29,7 @@
 - [X] Nov 9
     - [X] Docker and Kubernetes are setup and the site is visitable on duckdns.
     - [X] Includes having a user see movies from the database. 
-- [ ] Nov 13
+- [X] Nov 13
     - [X] Users can view the movies that are currently in the theatre, as well as the details of those movies.
     - [X] 1/2 Users can also view the upcoming movies and when they will visit the theatre.
     - [ ] 2/2 Users can also view the upcoming movies and when they will visit the theatre (second part because its not all the way done).

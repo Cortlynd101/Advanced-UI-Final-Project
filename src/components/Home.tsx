@@ -10,8 +10,8 @@ function Home() {
   return (
     <>
       <div className="main">
-        <h1>Welcome to the home page </h1>
-        <h1>List of Movies: </h1>
+        {/* <h1>Welcome to the home page </h1> */}
+        <h1>List of Movies Currently In The Theatre: </h1>
         <div>
           {isLoading && <Loading />}
           {!isLoading && (
@@ -24,8 +24,12 @@ function Home() {
                   onClick={() => setSelectedMovie(movie)}
                 >
                   <h2>
-                    {selectedMovie?.id == movie.id ? "✓ " : ""}
-                    {movie.name}
+                    {movie?.exitDate.toString() == "2024-12-05T00:00:00" && (
+                      <div>
+                        {selectedMovie?.id == movie.id ? "✓ " : ""}
+                        {movie.name}
+                      </div>
+                    )}
                   </h2>
                 </div>
               ))}

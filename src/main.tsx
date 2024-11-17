@@ -7,6 +7,7 @@ import { AuthProvider, AuthProviderProps } from 'react-oidc-context';
 import { BrowserRouter } from 'react-router-dom';
 // import { ErrorBoundary } from 'react-error-boundary';
 import { MoviesApiContextProvider } from './api-context/MoviesApiContextProvider.tsx';
+import { TicketsApiContextProvider } from './api-context/TicketsApiContextProvider.tsx';
 
 const uri = import.meta.env.VITE_REDIRECT_URI;
 
@@ -26,16 +27,18 @@ const oidcConfig: AuthProviderProps = {
   },
 };
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
     {/* <ErrorBoundary fallback={<div>Something went wrong</div>}> */}
-      <AuthProvider {...oidcConfig}>
+    <AuthProvider {...oidcConfig}>
       <MoviesApiContextProvider>
-        <StrictMode>
-          <App />
-        </StrictMode>
-        </MoviesApiContextProvider>
-      </AuthProvider>
+        <TicketsApiContextProvider>
+          <StrictMode>
+            <App />
+          </StrictMode>
+        </TicketsApiContextProvider>
+      </MoviesApiContextProvider>
+    </AuthProvider>
     {/* </ErrorBoundary> */}
   </BrowserRouter>
-)
+);

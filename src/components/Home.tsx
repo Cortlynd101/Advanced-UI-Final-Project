@@ -39,7 +39,11 @@ function Home() {
 
         <div className="row">
           <Link to={"details/" + selectedMovie?.id}>
-            Click to view our the details of the selected item. Item:{" "}
+            Click to view our the details of the selected movie.
+            {selectedMovie?.id}.
+          </Link>
+          <Link to={"tickets/" + selectedMovie?.id}>
+            Click to purhcase a ticket for the selected movie.
             {selectedMovie?.id}.
           </Link>
         </div>

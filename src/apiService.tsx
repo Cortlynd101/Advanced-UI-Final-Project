@@ -27,3 +27,14 @@ export const callPublicApiEndpoint = async () => {
 		console.log("cannot call auth endpoint");
     }
 }
+
+export const callTicketApiEndpoint = async () => {
+	try {
+		const response = await axios.get(`${uri}get-tickets`);
+		console.log("data from ticket api", response.data);
+		return response.data;
+	} 
+    catch {
+		console.log("cannot call ticket endpoint");
+    }
+}

@@ -32,9 +32,10 @@
 - [X] Nov 13
     - [X] Users can view the movies that are currently in the theatre, as well as the details of those movies.
     - [X] 1/2 Users can also view the upcoming movies and when they will visit the theatre.
-    - [ ] 2/2 Users can also view the upcoming movies and when they will visit the theatre (second part because its not all the way done).
-- [ ] Nov 16
-    - [ ] User can purchase tickets from the interactive UI in each theatre available.
+    - [X] 2/2 Users can also view the upcoming movies and when they will visit the theatre (second part because its not all the way done).
+- [X] Nov 16
+    - [X] 1/2 User can purchase tickets from the interactive UI in each theatre available.
+    - [ ] 2/2 User can purchase tickets from the interactive UI in each theatre available.
     - [ ] User will not be able to purchase tickets that are already purchased. Those UI elements will be disabled.
 - [ ] Nov 20
     - [ ] Users can view the available snacks and purchase them as well. 
@@ -48,8 +49,8 @@
 ## Rubric
 | Points | Section    | Requirement                                                      |
 | ------ | -----      | ---------------------------------------------------------------- |
-| 04/20    | General    | Professional, organized and smooth experience
-| 05/30    | Scope      | Is 2 to 3 times larger than Inventory Management
+| 05/20    | General    | Professional, organized and smooth experience
+| 07/30    | Scope      | Is 2 to 3 times larger than Inventory Management
 | 04/5     | Experience | All experiences mobile friendly
 | 02/5     | Experience | 3 instances where elements reorder themselves on smaller screens
 | 00/5     | Technology | Use local storage

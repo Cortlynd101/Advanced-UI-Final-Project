@@ -24,7 +24,7 @@ export const callPublicApiEndpoint = async () => {
 		return response.data;
 	} 
     catch {
-		console.log("cannot call auth endpoint");
+		console.log("cannot call public endpoint");
     }
 }
 
@@ -36,5 +36,27 @@ export const callTicketApiEndpoint = async () => {
 	} 
     catch {
 		console.log("cannot call ticket endpoint");
+    }
+}
+
+export const callSnackApiEndpoint = async () => {
+	try {
+		const response = await axios.get(`${uri}get-snacks`);
+		console.log("data from snack api", response.data);
+		return response.data;
+	} 
+    catch {
+		console.log("cannot call snack endpoint");
+    }
+}
+
+export const callUserApiEndpoint = async () => {
+	try {
+		const response = await axios.get(`${uri}get-users`);
+		console.log("data from user api", response.data);
+		return response.data;
+	} 
+    catch {
+		console.log("cannot call user endpoint");
     }
 }

@@ -1,8 +1,8 @@
 import { createContext, useContext } from "react";
 
 export interface ApiTicket {
-  id: string;
-  movie_id: string;
+  id: number;
+  movie_id: number;
   redeemed: boolean;
 }
 

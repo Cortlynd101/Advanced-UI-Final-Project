@@ -1,6 +1,6 @@
 import { FC, ReactNode, useEffect, useState } from "react";
 import { SnacksApiService } from "./SnacksApiService";
-import { ApiSnack, snacksApiContext } from "./useSnacksContext";
+import { ApiSnack, snacksApiContext } from "./useSnacksApiContext";
 
 export const SnacksApiContextProvider: FC<{ children: ReactNode }> = ({
   children,

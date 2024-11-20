@@ -7,6 +7,7 @@ import { AuthProvider, AuthProviderProps } from 'react-oidc-context';
 import { BrowserRouter } from 'react-router-dom';
 // import { ErrorBoundary } from 'react-error-boundary';
 import { MoviesApiContextProvider } from './api-context/MoviesApiContextProvider.tsx';
+import { SnacksApiContextProvider } from './api-context/SnacksApiContextProvider.tsx';
 import { TicketsApiContextProvider } from './api-context/TicketsApiContextProvider.tsx';
 
 const uri = import.meta.env.VITE_REDIRECT_URI;
@@ -33,9 +34,11 @@ createRoot(document.getElementById("root")!).render(
     <AuthProvider {...oidcConfig}>
       <MoviesApiContextProvider>
         <TicketsApiContextProvider>
-          <StrictMode>
-            <App />
-          </StrictMode>
+          <SnacksApiContextProvider>
+            <StrictMode>
+              <App />
+            </StrictMode>
+          </SnacksApiContextProvider>
         </TicketsApiContextProvider>
       </MoviesApiContextProvider>
     </AuthProvider>

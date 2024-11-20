@@ -1,7 +1,7 @@
 import { createContext, useContext } from "react";
 
 export interface ApiSnack {
-  id: string;
+  id: number;
   name: string;
   price: number;
 }

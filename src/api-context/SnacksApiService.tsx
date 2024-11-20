@@ -1,5 +1,5 @@
 import axios from "axios";
-import { ApiSnack } from "./useSnacksContext";
+import { ApiSnack } from "./useSnacksApiContext";
 const baseUrl = import.meta.env.VITE_API_URL;
 
 if (!baseUrl) console.log("VITE_API_URL is not set");

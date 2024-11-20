@@ -2,7 +2,7 @@ import { createContext, useContext } from "react";
 
 export interface ApiMovie {
   name: string;
-  id: string;
+  id: number;
   genre: string;
   runtime: string;
   rating: string;

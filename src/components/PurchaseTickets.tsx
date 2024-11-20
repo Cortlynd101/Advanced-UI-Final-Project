@@ -27,7 +27,7 @@ function PurchaseTickets() {
                   onClick={() => setSelectedTicket(ticket)}
                 >
                   <h2>
-                    {ticket?.movie_id == Id?.toString() && (
+                    {ticket.movie_id == Number(Id) && (
                       <div>
                         {selectedTicket?.id == ticket.id ? "✓ " : ""}
                         {ticket.id}

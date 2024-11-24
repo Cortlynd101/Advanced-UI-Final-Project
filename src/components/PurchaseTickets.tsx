@@ -16,7 +16,7 @@ function PurchaseTickets() {
 
   const purchaseTicket = () => {
     console.log("Purchasing ticket.");
-    let modifiedUser = usersList[0];
+    const modifiedUser = usersList[0];
     modifiedUser.user_tickets?.push(ticketsList[0]);
     modifyUser(modifiedUser)
   };

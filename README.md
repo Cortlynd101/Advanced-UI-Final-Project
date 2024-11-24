@@ -35,12 +35,14 @@
     - [X] 2/2 Users can also view the upcoming movies and when they will visit the theatre (second part because its not all the way done).
 - [X] Nov 16
     - [X] 1/2 User can purchase tickets from the interactive UI in each theatre available.
-    - [ ] 2/2 User can purchase tickets from the interactive UI in each theatre available.
+    - [X] 2/3 User can purchase tickets from the interactive UI in each theatre available.
+    - [ ] 3/3 User can purchase tickets from the interactive UI in each theatre available.
     - [ ] User will not be able to purchase tickets that are already purchased. Those UI elements will be disabled.
 - [X] Nov 20
-    - [X] Users can view the available snacks and purchase them as well.
-    - [ ] Users can view the available snacks and purchase them as well.
-- [ ] Nov 23
+    - [X] 1/2 Users can view the available snacks and purchase them as well.
+    - [X] 2/2 Users can view the available snacks and purchase them as well.
+    - [ ] 2/3 Users can view the available snacks and purchase them as well.
+- [X] Nov 23
     - [ ] User can view their QR codes on the profile after purchasing tickets/snacks.
 - [ ] Nov 26
     - [ ] Overall UI polish/adding extra features/catchup if needed. 
@@ -51,14 +53,14 @@
 | Points | Section    | Requirement                                                      |
 | ------ | -----      | ---------------------------------------------------------------- |
 | 06/20    | General    | Professional, organized and smooth experience
-| 10/30    | Scope      | Is 2 to 3 times larger than Inventory Management
+| 12/30    | Scope      | Is 2 to 3 times larger than Inventory Management
 | 04/5     | Experience | All experiences mobile friendly
 | 02/5     | Experience | 3 instances where elements reorder themselves on smaller screens
 | 00/5     | Technology | Use local storage
 | 00/5     | Technology | Client side state stores (e.g. tanstack query or context)
 | 02/5     | Technology | Toasts / global notifications or alerts
 | 03/5     | Technology | Error handling (both on api requests and render errors)
-| 03/5     | Technology | Network Calls that read and write data
+| 05/5     | Technology | Network Calls that read and write data
 | 00/5     | Technology | Developer type helping (typescript)
 | 03/5     | Technology | 10+ pages or views
 | 05/5     | Technology | CI/CD pipeline

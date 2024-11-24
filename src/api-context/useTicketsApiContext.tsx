@@ -9,8 +9,8 @@ export interface ApiTicket {
 export interface TicketsApiContextInterface {
   ticketsList: ApiTicket[];
   selectedTicket: ApiTicket | undefined;
-  setSelectedTicket: (item: ApiTicket) => void;
-  addTicket: (item: ApiTicket) => void;
+  setSelectedTicket: (ticket: ApiTicket) => void;
+  addTicket: (ticket: ApiTicket) => void;
   isLoading: boolean;
   modifyTicket: (changedTicket: ApiTicket) => void;
   deleteTicket: (deletedTicket: ApiTicket) => void;

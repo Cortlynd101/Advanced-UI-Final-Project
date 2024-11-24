@@ -21,7 +21,7 @@ function UpcomingMovies() {
                   onClick={() => setSelectedMovie(movie)}
                 >
                   <h2>
-                    {movie?.exitDate.toString() == "2024-12-12T00:00:00" && (
+                    {movie?.exit_date.toString() == "2024-12-12T00:00:00" && (
                       <div>
                         {selectedMovie?.id == movie.id ? "✓ " : ""}
                         {movie.name}

@@ -24,8 +24,6 @@ export const MoviesApiContextProvider: FC<{ children: ReactNode }> = ({
   };
   const modifyMovie = async (changedMovie: ApiMovie) => {
     setIsLoading(true);
-    // await MoviesApiService.delete(changedMovie);
-    // await MoviesApiService.add(changedMovie);
     await MoviesApiService.modify(changedMovie);
     const newMovies = await MoviesApiService.getAll();
     setMovies(newMovies);

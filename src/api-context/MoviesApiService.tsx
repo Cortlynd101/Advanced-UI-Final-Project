@@ -23,13 +23,13 @@ export const MoviesApiService = {
     await axios.post(`${baseUrl}`, newMovie);
   },
   modify: async (modifiedMovie: ApiMovie) => {
-    await fetch(`${baseUrl}modify-movie/` + `${modifiedMovie.id}`, {
-      method: "POST",
-      body: JSON.stringify(modifiedMovie),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    // await fetch(`${baseUrl}modify-movie/` + `${modifiedMovie.id}`, {
+    //   method: "POST",
+    //   body: JSON.stringify(modifiedMovie),
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    // });
 
     await axios.put(
       `${baseUrl}modify-movie/` + `${modifiedMovie.id}`,

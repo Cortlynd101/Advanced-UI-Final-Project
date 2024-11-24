@@ -6,8 +6,8 @@ export interface ApiMovie {
   genre: string;
   runtime: string;
   rating: string;
-  entranceDate: Date;
-  exitDate: Date;
+  entrance_date: Date;
+  exit_date: Date;
 }
 
 export interface MoviesApiContextInterface {

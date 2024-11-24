@@ -24,8 +24,6 @@ export const SnacksApiContextProvider: FC<{ children: ReactNode }> = ({
   };
   const modifySnack = async (changedSnack: ApiSnack) => {
     setIsLoading(true);
-    // await SnacksApiService.delete(changedSnack);
-    // await SnacksApiService.add(changedSnack);
     await SnacksApiService.modify(changedSnack);
     const newSnacks = await SnacksApiService.getAll();
     setSnacks(newSnacks);

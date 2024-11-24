@@ -9,6 +9,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { MoviesApiContextProvider } from './api-context/MoviesApiContextProvider.tsx';
 import { SnacksApiContextProvider } from './api-context/SnacksApiContextProvider.tsx';
 import { TicketsApiContextProvider } from './api-context/TicketsApiContextProvider.tsx';
+import { UsersApiContextProvider } from './api-context/UsersApiContextProvider.tsx';
 
 const uri = import.meta.env.VITE_REDIRECT_URI;
 
@@ -32,15 +33,17 @@ createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
     {/* <ErrorBoundary fallback={<div>Something went wrong</div>}> */}
     <AuthProvider {...oidcConfig}>
-      <MoviesApiContextProvider>
-        <TicketsApiContextProvider>
-          <SnacksApiContextProvider>
-            <StrictMode>
-              <App />
-            </StrictMode>
-          </SnacksApiContextProvider>
-        </TicketsApiContextProvider>
-      </MoviesApiContextProvider>
+      <UsersApiContextProvider>
+        <MoviesApiContextProvider>
+          <TicketsApiContextProvider>
+            <SnacksApiContextProvider>
+              <StrictMode>
+                <App />
+              </StrictMode>
+            </SnacksApiContextProvider>
+          </TicketsApiContextProvider>
+        </MoviesApiContextProvider>
+      </UsersApiContextProvider>
     </AuthProvider>
     {/* </ErrorBoundary> */}
   </BrowserRouter>

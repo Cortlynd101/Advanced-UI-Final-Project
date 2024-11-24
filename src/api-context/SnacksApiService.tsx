@@ -23,13 +23,13 @@ export const SnacksApiService = {
     await axios.post(`${baseUrl}`, newSnack);
   },
   modify: async (modifiedSnack: ApiSnack) => {
-    await fetch(`${baseUrl}modify-snack/` + `${modifiedSnack.id}`, {
-      method: "POST",
-      body: JSON.stringify(modifiedSnack),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    // await fetch(`${baseUrl}modify-snack/` + `${modifiedSnack.id}`, {
+    //   method: "POST",
+    //   body: JSON.stringify(modifiedSnack),
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    // });
 
     await axios.put(
       `${baseUrl}modify-snack/` + `${modifiedSnack.id}`,

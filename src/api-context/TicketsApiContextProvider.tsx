@@ -24,8 +24,6 @@ export const TicketsApiContextProvider: FC<{ children: ReactNode }> = ({
   };
   const modifyTicket = async (changedTicket: ApiTicket) => {
     setIsLoading(true);
-    // await TicketsApiService.delete(changedTicket);
-    // await TicketsApiService.add(changedTicket);
     await TicketsApiService.modify(changedTicket);
     const newTickets = await TicketsApiService.getAll();
     setTickets(newTickets);

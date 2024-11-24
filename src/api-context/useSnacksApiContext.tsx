@@ -9,8 +9,8 @@ export interface ApiSnack {
 export interface SnacksApiContextInterface {
   snacksList: ApiSnack[];
   selectedSnack: ApiSnack | undefined;
-  setSelectedSnack: (item: ApiSnack) => void;
-  addSnack: (item: ApiSnack) => void;
+  setSelectedSnack: (snack: ApiSnack) => void;
+  addSnack: (snack: ApiSnack) => void;
   isLoading: boolean;
   modifySnack: (changedSnack: ApiSnack) => void;
   deleteSnack: (deletedSnack: ApiSnack) => void;

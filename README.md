@@ -37,8 +37,9 @@
     - [X] 1/2 User can purchase tickets from the interactive UI in each theatre available.
     - [ ] 2/2 User can purchase tickets from the interactive UI in each theatre available.
     - [ ] User will not be able to purchase tickets that are already purchased. Those UI elements will be disabled.
-- [ ] Nov 20
-    - [ ] Users can view the available snacks and purchase them as well. 
+- [X] Nov 20
+    - [X] Users can view the available snacks and purchase them as well.
+    - [ ] Users can view the available snacks and purchase them as well.
 - [ ] Nov 23
     - [ ] User can view their QR codes on the profile after purchasing tickets/snacks.
 - [ ] Nov 26
@@ -49,17 +50,17 @@
 ## Rubric
 | Points | Section    | Requirement                                                      |
 | ------ | -----      | ---------------------------------------------------------------- |
-| 05/20    | General    | Professional, organized and smooth experience
-| 07/30    | Scope      | Is 2 to 3 times larger than Inventory Management
+| 06/20    | General    | Professional, organized and smooth experience
+| 10/30    | Scope      | Is 2 to 3 times larger than Inventory Management
 | 04/5     | Experience | All experiences mobile friendly
 | 02/5     | Experience | 3 instances where elements reorder themselves on smaller screens
 | 00/5     | Technology | Use local storage
 | 00/5     | Technology | Client side state stores (e.g. tanstack query or context)
 | 02/5     | Technology | Toasts / global notifications or alerts
 | 03/5     | Technology | Error handling (both on api requests and render errors)
-| 02/5     | Technology | Network Calls that read and write data
+| 03/5     | Technology | Network Calls that read and write data
 | 00/5     | Technology | Developer type helping (typescript)
-| 02/5     | Technology | 10+ pages or views
+| 03/5     | Technology | 10+ pages or views
 | 05/5     | Technology | CI/CD pipeline
 | 00/5     | Technology | Tests run in pipeline, pipeline aborts if they fail
 | 05/5     | Technology | linting in pipeline

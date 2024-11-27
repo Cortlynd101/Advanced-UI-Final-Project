@@ -2,9 +2,6 @@ import { NavLink } from "react-router-dom";
 import {
   FileEarmarkFill,
   HouseFill,
-  ClipboardDataFill,
-  // PlusSquareFill,
-  // PencilSquare,
 } from "react-bootstrap-icons";
 import { useMediaQuery } from "react-responsive";
 
@@ -19,14 +16,6 @@ function NavBar() {
               <HouseFill className="mx-2" />
               <br></br>
               <NavLink to="/">Home</NavLink>
-            </div>
-            <div className="col">
-              <ClipboardDataFill className="mx-2" />
-              <br></br>
-              <NavLink to={"/details/" + 0}>
-                {" "}
-                Details for the default first movie
-              </NavLink>
             </div>
             <div className="col">
               <FileEarmarkFill className="mx-2" />
@@ -50,12 +39,6 @@ function NavBar() {
             <div className="col">
               <HouseFill className="mx-2" />
               <NavLink to="/">Home</NavLink>
-            </div>
-            <div className="col">
-              <ClipboardDataFill className="mx-2" />
-              <NavLink to={"details/" + 0}>
-                Details for the default first movie
-              </NavLink>
             </div>
             <div className="col">
               <FileEarmarkFill className="mx-2" />

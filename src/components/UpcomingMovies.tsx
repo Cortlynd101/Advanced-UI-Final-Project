@@ -8,7 +8,7 @@ function UpcomingMovies() {
   return (
     <>
       <div className="main">
-        <h1>Upcoming Movies: </h1>
+        <h3>Movies Entering The Theatre December 6th </h3>
         <div>
           {isLoading && <Loading />}
           {!isLoading && (
@@ -20,14 +20,14 @@ function UpcomingMovies() {
                   style={{ cursor: "default" }}
                   onClick={() => setSelectedMovie(movie)}
                 >
-                  <h2>
+                  <h5>
                     {movie?.exit_date.toString() == "2024-12-12T00:00:00" && (
                       <div>
                         {selectedMovie?.id == movie.id ? "✓ " : ""}
                         {movie.name}
                       </div>
                     )}
-                  </h2>
+                  </h5>
                 </div>
               ))}
             </div>
@@ -35,9 +35,9 @@ function UpcomingMovies() {
         </div>
 
         <div className="row">
-          <Link to={"details/" + selectedMovie?.id}>
-            Click to view our the details of the selected item. Item:{" "}
-            {selectedMovie?.id}.
+          <Link to={"/details/" + selectedMovie?.id}>
+            Click to view our the details of the selected movie
+            {" " + selectedMovie?.id}.
           </Link>
         </div>
       </div>

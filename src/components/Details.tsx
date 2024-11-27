@@ -26,7 +26,7 @@ function Details() {
   return (
     <>
       <div className="main">
-        <h1>Details for movie id {selectedMovie?.id}.</h1>
+        <h3>Details for movie id {selectedMovie?.id}.</h3>
         <p>Name: {selectedMovie?.name}</p>
         <p>Genre: {selectedMovie?.genre}</p>
         <p>Runtime: {selectedMovie?.runtime}</p>

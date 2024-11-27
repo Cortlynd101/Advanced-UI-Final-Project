@@ -10,8 +10,7 @@ function Home() {
   return (
     <>
       <div className="main">
-        {/* <h1>Welcome to the home page </h1> */}
-        <h1>List of Movies Currently In The Theatre: </h1>
+        <h3>Movies Currently In The Theatre Until December 5th</h3>
         <div>
           {isLoading && <Loading />}
           {!isLoading && (
@@ -23,14 +22,14 @@ function Home() {
                   style={{ cursor: "default" }}
                   onClick={() => setSelectedMovie(movie)}
                 >
-                  <h2>
+                  <h5>
                     {movie?.exit_date.toString() == "2024-12-05T00:00:00" && (
                       <div>
                         {selectedMovie?.id == movie.id ? "✓ " : ""}
                         {movie.name}
                       </div>
                     )}
-                  </h2>
+                  </h5>
                 </div>
               ))}
             </div>
@@ -39,12 +38,12 @@ function Home() {
 
         <div className="row">
           <Link to={"details/" + selectedMovie?.id}>
-            Click to view our the details of the selected movie.
-            {selectedMovie?.id}.
+            Click to view our the details of the selected movie
+            {" " + selectedMovie?.id}.
           </Link>
-          <Link to={"tickets/" + selectedMovie?.id}>
-            Click to purhcase a ticket for the selected movie.
-            {selectedMovie?.id}.
+          <Link to={"tickets"}>
+            Click to purhcase a ticket for the selected movie
+            {" " + selectedMovie?.id}.
           </Link>
         </div>
       </div>

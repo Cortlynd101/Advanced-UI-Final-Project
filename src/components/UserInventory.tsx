@@ -1,19 +1,17 @@
-import { useMoviesApiContext } from "../api-context/useMoviesApiContext";
 import { useSnacksApiContext } from "../api-context/useSnacksApiContext";
 import { useTicketsApiContext } from "../api-context/useTicketsApiContext";
 import { useUsersApiContext } from "../api-context/useUsersApiContext";
 
 function UserInventory() {
-  const { selectedMovie } = useMoviesApiContext();
-  const { setSelectedTicket } = useTicketsApiContext();
-  const { setSelectedSnack } = useSnacksApiContext();
+  const { selectedTicket, setSelectedTicket } = useTicketsApiContext();
+  const { selectedSnack, setSelectedSnack } = useSnacksApiContext();
   const { usersList } = useUsersApiContext();
   const tickets = usersList[0].user_tickets;
   const snacks = usersList[0].user_snacks;
     return (
       <>
         <div className="main">
-          <h1>Purchased tickets: </h1>
+          <h3>Purchased tickets: </h3>
           <div>
             {tickets?.map((ticket) => (
               <div
@@ -22,16 +20,16 @@ function UserInventory() {
                 style={{ cursor: "default" }}
                 onClick={() => setSelectedTicket(ticket)}
               >
-                <h2>
+                <h5>
                   <div>
-                    {selectedMovie?.id == ticket.id ? "✓ " : ""}
-                    {ticket.redeemed}
+                    {selectedTicket?.id == ticket.id ? "✓ " : ""}
+                    Ticket id number: {ticket.id.toString()}
                   </div>
-                </h2>
+                </h5>
               </div>
             ))}
           </div>
-          <h1>Purchased snacks: </h1>
+          <h3>Purchased snacks: </h3>
           <div>
             {snacks?.map((snack) => (
               <div
@@ -40,12 +38,12 @@ function UserInventory() {
                 style={{ cursor: "default" }}
                 onClick={() => setSelectedSnack(snack)}
               >
-                <h2>
+                <h5>
                   <div>
-                    {selectedMovie?.id == snack.id ? "✓ " : ""}
+                    {selectedSnack?.id == snack.id ? "✓ " : ""}
                     {snack.name}
                   </div>
-                </h2>
+                </h5>
               </div>
             ))}
           </div>

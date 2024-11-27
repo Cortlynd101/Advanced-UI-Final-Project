@@ -3,7 +3,7 @@ import { useAuth } from "react-oidc-context";
 
 function LogInButton() {
     const auth = useAuth();
-    
+
     //set token
     //set token to date expiration
     // useEffect{() => {
@@ -31,12 +31,12 @@ function LogInButton() {
         return (
         <div>
             Hello {auth.user?.profile.sub}{" "}
-            <button onClick={() => void auth.removeUser()}>Log out</button>
+            <button className="btn btn-primary" onClick={() => void auth.removeUser()}>Log out</button>
         </div>
         );
     }
 
-    return <button onClick={() => void auth.signinRedirect()}>Log in</button>;
+    return <button className="btn btn-primary" onClick={() => void auth.signinRedirect()}>Log in</button>;
 }
 
 export default LogInButton;

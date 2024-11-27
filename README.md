@@ -44,7 +44,7 @@
     - [X] 3/3 Users can view the available snacks and purchase them as well.
 - [X] Nov 23
     - [ ] User can view their QR codes on the profile after purchasing tickets/snacks.
-- [ ] Nov 26
+- [X] Nov 26
     - [X] Overall UI polish/adding extra features/catchup if needed. 
 - [ ] Dec 4
     - [ ] User gets sent an email with the QR codes for their order instead of the page that shows them their QR codes.

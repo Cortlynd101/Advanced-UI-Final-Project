@@ -22,7 +22,15 @@ export interface MoviesApiContextInterface {
 
 export const moviesApiContext = createContext<MoviesApiContextInterface>({
   moviesList: [],
-  selectedMovie: undefined,
+  selectedMovie: {
+    id: 0,
+    name: "Interstellar",
+    genre: "Science Fiction",
+    runtime: "2h 49m",
+    rating: "8.7",
+    entrance_date: new Date("2024-11-29T00:00:00"),
+    exit_date: new Date("2024-12-05T00:00:00"),
+  },
   setSelectedMovie: () => {},
   addMovie: () => {},
   isLoading: false,

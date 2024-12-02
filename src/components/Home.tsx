@@ -6,7 +6,7 @@ import Toast from "./Toast";
 
 function Home() {
   const { moviesList, selectedMovie, setSelectedMovie } = useMoviesApiContext(); // isLoading
-    const isLoading = false;
+  const isLoading = false;
   return (
     <>
       <div className="main">

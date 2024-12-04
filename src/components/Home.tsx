@@ -7,6 +7,7 @@ import Toast from "./Toast";
 function Home() {
   const { moviesList, selectedMovie, setSelectedMovie } = useMoviesApiContext(); // isLoading
   const isLoading = false;
+
   return (
     <>
       <div className="main">
@@ -38,12 +39,12 @@ function Home() {
 
         <div className="row">
           <Link to={"details/" + selectedMovie?.id}>
-            Click to view our the details of the selected movie
-            {" " + selectedMovie?.id}.
+            Click to view the details of 
+            {" " + selectedMovie?.name}.
           </Link>
           <Link to={"tickets"}>
-            Click to purhcase a ticket for the selected movie
-            {" " + selectedMovie?.id}.
+            Click to view purchasable tickets for 
+            {" " + selectedMovie?.name}.
           </Link>
         </div>
       </div>

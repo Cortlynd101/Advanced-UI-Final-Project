@@ -30,7 +30,7 @@ function Details() {
         <p>Name: {selectedMovie?.name}</p>
         <p>Genre: {selectedMovie?.genre}</p>
         <p>Runtime: {selectedMovie?.runtime}</p>
-        <p>Rating: {selectedMovie?.rating}</p>
+        <p>IMDB Rating: {selectedMovie?.rating}</p>
         <p>Entrance date: {selectedMovie?.entrance_date.toString().slice(0, 10)}</p>
         <p>Exit date: {selectedMovie?.exit_date.toString().slice(0, 10)}</p>
       </div>

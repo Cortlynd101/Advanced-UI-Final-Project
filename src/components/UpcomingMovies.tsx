@@ -36,8 +36,8 @@ function UpcomingMovies() {
 
         <div className="row">
           <Link to={"/details/" + selectedMovie?.id}>
-            Click to view our the details of the selected movie
-            {" " + selectedMovie?.id}.
+            Click to view the details of 
+            {" " + selectedMovie?.name}.
           </Link>
         </div>
       </div>

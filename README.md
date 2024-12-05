@@ -43,17 +43,18 @@
     - [X] 2/3 Users can view the available snacks and purchase them as well.
     - [X] 3/3 Users can view the available snacks and purchase them as well.
 - [X] Nov 23
-    - [ ] User can view their QR codes on the profile after purchasing tickets/snacks.
+    - [X] 1/2 User can view their QR codes on the profile after purchasing tickets/snacks.
+    - [ ] 2/2 User can view their QR codes on the profile after purchasing tickets/snacks.
 - [X] Nov 26
     - [X] Overall UI polish/adding extra features/catchup if needed. 
-- [ ] Dec 4
+- [X] Dec 4
     - [ ] User gets sent an email with the QR codes for their order instead of the page that shows them their QR codes.
      
 ## Rubric
 | Points | Section    | Requirement                                                      |
 | ------ | -----      | ---------------------------------------------------------------- |
-| 10/20    | General    | Professional, organized and smooth experience
-| 15/30    | Scope      | Is 2 to 3 times larger than Inventory Management
+| 12/20    | General    | Professional, organized and smooth experience
+| 17/30    | Scope      | Is 2 to 3 times larger than Inventory Management
 | 04/5     | Experience | All experiences mobile friendly
 | 02/5     | Experience | 3 instances where elements reorder themselves on smaller screens
 | 00/5     | Technology | Use local storage

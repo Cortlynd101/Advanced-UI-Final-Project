@@ -33,7 +33,7 @@ const PurchaseTickets: React.FC = () => {
       setTicketsToBePurchased([]);
   
       Toastify({
-        text: "Tickets purchased successfully!",
+        text: "Tickets purchased successfully! They have been added to your inventory.",
         duration: 3000,
         close: true,
         gravity: "top",
@@ -58,6 +58,7 @@ const PurchaseTickets: React.FC = () => {
     ticket.redeemed = true;
     modifiedUser.user_tickets?.push(ticket);
     await modifyUser(modifiedUser)
+    setTicketsToBePurchased([]);
   };
   return (
     <>

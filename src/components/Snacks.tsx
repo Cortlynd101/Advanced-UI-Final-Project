@@ -7,7 +7,7 @@ function Snacks() {
   const { usersList, modifyUser } = useUsersApiContext();
   
   const purchaseSnack = (snack: ApiSnack) => {
-    console.log("Purchasing snack.");
+    console.log("Purchasing snack. It has been added to your inventory.");
     const modifiedUser = usersList[0];
     modifiedUser.user_snacks?.push(snack);
     modifyUser(modifiedUser)

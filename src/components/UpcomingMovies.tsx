@@ -35,10 +35,14 @@ function UpcomingMovies() {
         </div>
 
         <div className="row">
-          <Link to={"/details/" + selectedMovie?.id}>
-            Click to view the details of 
-            {" " + selectedMovie?.name}.
-          </Link>
+          {selectedMovie?.id === 0 ? (
+            <div>Please select a movie if you want to view its details.</div>
+          ) : (
+            <Link to={"/details/" + selectedMovie?.id}>
+              Click to view the details of
+              {" " + selectedMovie?.name}.
+            </Link>
+          )}
         </div>
       </div>
     </>

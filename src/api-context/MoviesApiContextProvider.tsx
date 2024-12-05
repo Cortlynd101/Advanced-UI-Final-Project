@@ -13,6 +13,10 @@ export const MoviesApiContextProvider: FC<{ children: ReactNode }> = ({
     MoviesApiService.getAll().then((apiData) => {
       setMovies(apiData);
       setIsLoading(false);
+
+      if (apiData.length > 0) {
+        setSelectedMovie(apiData[0]);
+      }
     });
   }, []);
   const addMovie = async (newMovie: ApiMovie) => {
@@ -21,6 +25,10 @@ export const MoviesApiContextProvider: FC<{ children: ReactNode }> = ({
     const newMovies = await MoviesApiService.getAll();
     setMovies(newMovies);
     setIsLoading(false);
+
+    if (!selectedMovie && newMovies.length > 0) {
+      setSelectedMovie(newMovies[0]);
+    }
   };
   const modifyMovie = async (changedMovie: ApiMovie) => {
     setIsLoading(true);
@@ -35,6 +43,12 @@ export const MoviesApiContextProvider: FC<{ children: ReactNode }> = ({
     const newMovies = await MoviesApiService.getAll();
     setMovies(newMovies);
     setIsLoading(false);
+
+    if (selectedMovie?.id === deletedMovie.id && newMovies.length > 0) {
+      setSelectedMovie(newMovies[0]);
+    } else if (newMovies.length === 0) {
+      setSelectedMovie(undefined);
+    }
   };
 
   return (

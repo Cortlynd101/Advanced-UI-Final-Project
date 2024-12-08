@@ -1,14 +1,19 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useMoviesApiContext } from "../api-context/useMoviesApiContext";
 import Loading from "./Loading";
 
 function UpcomingMovies() {
-  const { moviesList, selectedMovie, setSelectedMovie } = useMoviesApiContext(); // isLoading
+  const { moviesList, setSelectedMovie } = useMoviesApiContext(); // isLoading
   const isLoading = false;
+  const navigate = useNavigate();
+
+  const details = (movieId: number) => {
+    navigate("/details/" + movieId);
+  };
   return (
     <>
       <div className="main">
-        <h3>Movies Entering The Theatre December 6th </h3>
+        <h3>Movies Entering The Theatre December 13th </h3>
         <div>
           {isLoading && <Loading />}
           {!isLoading && (
@@ -21,27 +26,22 @@ function UpcomingMovies() {
                   onClick={() => setSelectedMovie(movie)}
                 >
                   <h5>
-                    {movie?.exit_date.toString() == "2024-12-12T00:00:00" && (
+                    {movie?.exit_date.toString() == "2024-12-19T00:00:00" && (
                       <div>
-                        {selectedMovie?.id == movie.id ? "✓ " : ""}
                         {movie.name}
+                        <button
+                          className="btn btn-primary"
+                          onClick={() => details(movie.id)}
+                          style={{margin: "10px"}}
+                        >
+                          Details
+                        </button>
                       </div>
                     )}
                   </h5>
                 </div>
               ))}
             </div>
-          )}
-        </div>
-
-        <div className="row">
-          {selectedMovie?.id === 0 ? (
-            <div>Please select a movie if you want to view its details.</div>
-          ) : (
-            <Link to={"/details/" + selectedMovie?.id}>
-              Click to view the details of
-              {" " + selectedMovie?.name}.
-            </Link>
           )}
         </div>
       </div>

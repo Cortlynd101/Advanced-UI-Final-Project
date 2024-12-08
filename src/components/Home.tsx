@@ -1,33 +1,58 @@
 import "../App.css";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useMoviesApiContext } from "../api-context/useMoviesApiContext";
 import Loading from "./Loading";
 import Toast from "./Toast";
 
 function Home() {
-  const { moviesList, selectedMovie, setSelectedMovie } = useMoviesApiContext(); // isLoading
+  const { moviesList, setSelectedMovie } = useMoviesApiContext(); // isLoading
   const isLoading = false;
+  const navigate = useNavigate();
+
+  const details = (movieId: number) => {
+    navigate("/details/" + movieId);
+  };
+
+  const purchaseTickets = (movieId: number) => {
+    const movie = moviesList.find(m => m.id === movieId);
+    if (movie) {
+      setSelectedMovie(movie);
+      navigate("/tickets");
+    }
+  };
 
   return (
     <>
       <div className="main">
-        <h3>Movies Currently In The Theatre Until December 5th</h3>
+        <h3>Movies Currently In The Theatre Until December 12th</h3>
         <div>
           {isLoading && <Loading />}
           {!isLoading && (
             <div>
               {moviesList.map((movie) => (
                 <div
-                  className=""
+                  className="row"
                   key={movie.id}
                   style={{ cursor: "default" }}
                   onClick={() => setSelectedMovie(movie)}
                 >
                   <h5>
-                    {movie?.exit_date.toString() == "2024-12-05T00:00:00" && (
-                      <div>
-                        {selectedMovie?.id == movie.id ? "✓ " : ""}
+                    {movie?.exit_date.toString() == "2024-12-12T00:00:00" && (
+                      <div className="col">
                         {movie.name}
+                        <button
+                          className="btn btn-primary"
+                          onClick={() => details(movie.id)}
+                          style={{margin: "10px"}}
+                        >
+                          Details
+                        </button>
+                        <button
+                          className="btn btn-primary"
+                          onClick={() => purchaseTickets(movie.id)}
+                        >
+                          Purchase Tickets
+                        </button>
                       </div>
                     )}
                   </h5>
@@ -35,17 +60,6 @@ function Home() {
               ))}
             </div>
           )}
-        </div>
-
-        <div className="row">
-          <Link to={"details/" + selectedMovie?.id}>
-            Click to view the details of 
-            {" " + selectedMovie?.name}.
-          </Link>
-          <Link to={"tickets"}>
-            Click to view purchasable tickets for 
-            {" " + selectedMovie?.name}.
-          </Link>
         </div>
       </div>
       <Toast></Toast>

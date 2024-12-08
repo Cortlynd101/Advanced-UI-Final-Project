@@ -13,14 +13,14 @@ const PurchaseTickets: React.FC = () => {
 
   const selectTicket = (ticket: ApiTicket) => {
     const element = document.getElementById(ticket.id.toString());
-    if ((element as HTMLDivElement).style.background == "blue") {
+    if ((element as HTMLDivElement).style.background == "gray") {
       setTicketsToBePurchased((oldTickets) => [...oldTickets, ticket]);
       (element as HTMLDivElement).style.background = "#bb1705"
     } else {
       setTicketsToBePurchased((oldTickets) =>
         oldTickets.filter((ticket) => ticket.id !== ticket.id)
       );
-      (element as HTMLDivElement).style.background = "blue"
+      (element as HTMLDivElement).style.background = "gray"
     }
   };
 
@@ -72,7 +72,7 @@ const PurchaseTickets: React.FC = () => {
                   <div className="col" style={{ padding: "10px" }}>
                     <button
                       id={ticket.id.toString()}
-                      style={{ background: "blue" }}
+                      style={{ background: "gray" }}
                       disabled={ticket.redeemed}
                       className="btn btn-primary"
                       onClick={() => selectTicket(ticket)}
@@ -93,7 +93,7 @@ const PurchaseTickets: React.FC = () => {
                   <div className="col" style={{ padding: "10px" }}>
                     <button
                       id={ticket.id.toString()}
-                      style={{ background: "blue" }}
+                      style={{ background: "gray" }}
                       disabled={ticket.redeemed}
                       className="btn btn-primary"
                       onClick={() => selectTicket(ticket)}
@@ -114,7 +114,7 @@ const PurchaseTickets: React.FC = () => {
                   <div className="col" style={{ padding: "10px" }}>
                     <button
                       id={ticket.id.toString()}
-                      style={{ background: "blue" }}
+                      style={{ background: "gray" }}
                       disabled={ticket.redeemed}
                       className="btn btn-primary"
                       onClick={() => selectTicket(ticket)}
@@ -135,7 +135,7 @@ const PurchaseTickets: React.FC = () => {
                   <div className="col" style={{ padding: "10px" }}>
                     <button
                       id={ticket.id.toString()}
-                      style={{ background: "blue" }}
+                      style={{ background: "gray" }}
                       disabled={ticket.redeemed}
                       className="btn btn-primary"
                       onClick={() => selectTicket(ticket)}

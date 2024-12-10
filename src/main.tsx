@@ -5,11 +5,11 @@ import "./custom.scss";
 import "bootstrap";
 import { AuthProvider, AuthProviderProps } from 'react-oidc-context';
 import { BrowserRouter } from 'react-router-dom';
-// import { ErrorBoundary } from 'react-error-boundary';
 import { MoviesApiContextProvider } from './api-context/MoviesApiContextProvider.tsx';
 import { SnacksApiContextProvider } from './api-context/SnacksApiContextProvider.tsx';
 import { TicketsApiContextProvider } from './api-context/TicketsApiContextProvider.tsx';
 import { UsersApiContextProvider } from './api-context/UsersApiContextProvider.tsx';
+import { ErrorBoundary } from 'react-error-boundary';
 
 const uri = import.meta.env.VITE_REDIRECT_URI;
 
@@ -31,20 +31,27 @@ const oidcConfig: AuthProviderProps = {
 
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
-    {/* <ErrorBoundary fallback={<div>Something went wrong</div>}> */}
-    <AuthProvider {...oidcConfig}>
-      <UsersApiContextProvider>
-        <MoviesApiContextProvider>
-          <TicketsApiContextProvider>
-            <SnacksApiContextProvider>
-              <StrictMode>
-                <App />
-              </StrictMode>
-            </SnacksApiContextProvider>
-          </TicketsApiContextProvider>
-        </MoviesApiContextProvider>
-      </UsersApiContextProvider>
-    </AuthProvider>
-    {/* </ErrorBoundary> */}
+    <ErrorBoundary
+      fallbackRender={({ error, resetErrorBoundary }) => (
+        <div>
+          <p>Something went wrong: {error.message}</p>
+          <button onClick={resetErrorBoundary}>Try again</button>
+        </div>
+      )}
+    >
+      <AuthProvider {...oidcConfig}>
+        <UsersApiContextProvider>
+          <MoviesApiContextProvider>
+            <TicketsApiContextProvider>
+              <SnacksApiContextProvider>
+                <StrictMode>
+                  <App />
+                </StrictMode>
+              </SnacksApiContextProvider>
+            </TicketsApiContextProvider>
+          </MoviesApiContextProvider>
+        </UsersApiContextProvider>
+      </AuthProvider>
+    </ErrorBoundary>
   </BrowserRouter>
 );

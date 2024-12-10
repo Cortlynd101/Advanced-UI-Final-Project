@@ -1,7 +1,9 @@
 import { NavLink } from "react-router-dom";
 import {
-  FileEarmarkFill,
   HouseFill,
+  PlusCircleFill,
+  CalendarWeekFill,
+  BagFill
 } from "react-bootstrap-icons";
 import { useMediaQuery } from "react-responsive";
 
@@ -18,17 +20,29 @@ function NavBar() {
               <NavLink to="/">Home</NavLink>
             </div>
             <div className="col">
-              <FileEarmarkFill className="mx-2" />
+              <CalendarWeekFill className="mx-2" />
               <NavLink to={"upcoming-movies"}>View the upcoming movies</NavLink>
             </div>
             <div className="col">
-              <FileEarmarkFill className="mx-2" />
+              <BagFill className="mx-2" />
+              <NavLink to={"gallery"}>
+                View the gallery
+              </NavLink>
+            </div>
+            <div className="col">
+              <PlusCircleFill className="mx-2" />
               <NavLink to={"snacks"}>Purchase snacks</NavLink>
             </div>
             <div className="col">
-              <FileEarmarkFill className="mx-2" />
-              <NavLink to={"user-inventory"}>
-                View purchased tickets/snacks
+              <BagFill className="mx-2" />
+              <NavLink to={"ticket-inventory"}>
+                View purchased tickets
+              </NavLink>
+            </div>
+            <div className="col">
+              <BagFill className="mx-2" />
+              <NavLink to={"snack-inventory"}>
+                View purchased snacks
               </NavLink>
             </div>
           </div>
@@ -41,17 +55,29 @@ function NavBar() {
               <NavLink to="/">Home</NavLink>
             </div>
             <div className="col">
-              <FileEarmarkFill className="mx-2" />
+              <CalendarWeekFill className="mx-2" />
               <NavLink to={"upcoming-movies"}>View the upcoming movies</NavLink>
             </div>
             <div className="col">
-              <FileEarmarkFill className="mx-2" />
+              <BagFill className="mx-2" />
+              <NavLink to={"gallery"}>
+                View the gallery
+              </NavLink>
+            </div>
+            <div className="col">
+              <PlusCircleFill className="mx-2" />
               <NavLink to={"snacks"}>Purchase snacks</NavLink>
             </div>
             <div className="col">
-              <FileEarmarkFill className="mx-2" />
-              <NavLink to={"user-inventory"}>
-                View purchased tickets/snacks
+              <BagFill className="mx-2" />
+              <NavLink to={"ticket-inventory"}>
+                View purchased tickets
+              </NavLink>
+            </div>
+            <div className="col">
+              <BagFill className="mx-2" />
+              <NavLink to={"snack-inventory"}>
+                View purchased snacks
               </NavLink>
             </div>
           </div>

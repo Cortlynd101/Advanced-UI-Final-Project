@@ -4,6 +4,7 @@ import { useUsersApiContext } from "../api-context/useUsersApiContext";
 import { ApiTicket, useTicketsApiContext } from "../api-context/useTicketsApiContext";
 import React from "react";
 import Toastify from "toastify-js";
+import { useMediaQuery } from "react-responsive";
 
 const PurchaseTickets: React.FC = () => {
   const { selectedMovie } = useMoviesApiContext(); // isLoading
@@ -58,106 +59,144 @@ const PurchaseTickets: React.FC = () => {
     ticket.redeemed = true;
     modifiedUser.user_tickets?.push(ticket);
     await modifyUser(modifiedUser)
+    localStorage.setItem("puchasedTicketId" + ticket.id.toString(), ticket.id.toString());
     setTicketsToBePurchased([]);
   };
+  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
   return (
     <>
-      <div className="main">
-        <h3>Tickets for {selectedMovie?.name}: </h3>
-        <div className="row">
-          {ticketsList.map((ticket) => (
-            <React.Fragment key={ticket.id}>
-              {ticket.movie_id == Number(selectedMovie?.id) &&
-                ticket.id - 20 * ticket.movie_id <= 4 && (
-                  <div className="col" style={{ padding: "10px" }}>
-                    <button
-                      id={ticket.id.toString()}
-                      style={{ background: "gray" }}
-                      disabled={ticket.redeemed}
-                      className="btn btn-primary"
-                      onClick={() => selectTicket(ticket)}
-                    >
-                      Ticket ID: {ticket.id}
-                    </button>
-                  </div>
-                )}
-            </React.Fragment>
-          ))}
-        </div>
-        <div className="row">
-          {ticketsList.map((ticket) => (
-            <React.Fragment key={ticket.id}>
-              {ticket.movie_id == Number(selectedMovie?.id) &&
-                ticket.id - 20 * ticket.movie_id <= 9 &&
-                ticket.id - 20 * ticket.movie_id > 4 && (
-                  <div className="col" style={{ padding: "10px" }}>
-                    <button
-                      id={ticket.id.toString()}
-                      style={{ background: "gray" }}
-                      disabled={ticket.redeemed}
-                      className="btn btn-primary"
-                      onClick={() => selectTicket(ticket)}
-                    >
-                      Ticket ID: {ticket.id}
-                    </button>
-                  </div>
-                )}
-            </React.Fragment>
-          ))}
-        </div>
-        <div className="row">
-          {ticketsList.map((ticket) => (
-            <React.Fragment key={ticket.id}>
-              {ticket.movie_id == Number(selectedMovie?.id) &&
-                ticket.id - 20 * ticket.movie_id <= 14 &&
-                ticket.id - 20 * ticket.movie_id > 9 && (
-                  <div className="col" style={{ padding: "10px" }}>
-                    <button
-                      id={ticket.id.toString()}
-                      style={{ background: "gray" }}
-                      disabled={ticket.redeemed}
-                      className="btn btn-primary"
-                      onClick={() => selectTicket(ticket)}
-                    >
-                      Ticket ID: {ticket.id}
-                    </button>
-                  </div>
-                )}
-            </React.Fragment>
-          ))}
-        </div>
-        <div className="row">
-          {ticketsList.map((ticket) => (
-            <React.Fragment key={ticket.id}>
-              {ticket.movie_id == Number(selectedMovie?.id) &&
-                ticket.id - 20 * ticket.movie_id <= 19 &&
-                ticket.id - 20 * ticket.movie_id > 14 && (
-                  <div className="col" style={{ padding: "10px" }}>
-                    <button
-                      id={ticket.id.toString()}
-                      style={{ background: "gray" }}
-                      disabled={ticket.redeemed}
-                      className="btn btn-primary"
-                      onClick={() => selectTicket(ticket)}
-                    >
-                      Ticket ID: {ticket.id}
-                    </button>
-                  </div>
-                )}
-            </React.Fragment>
-          ))}
-        </div>
-        <div className="row">
-          <div className="col">
-            <button
-              onClick={() => purchaseTickets()}
-              className="btn btn-primary"
-            >
-              Purchase Selected Tickets
-            </button>
+      {!isMobile ? (
+        <div className="main">
+          <h3>Tickets for {selectedMovie?.name}: </h3>
+          <div className="row">
+            {ticketsList.map((ticket) => (
+              <React.Fragment key={ticket.id}>
+                {ticket.movie_id == Number(selectedMovie?.id) &&
+                  ticket.id - 20 * ticket.movie_id <= 4 && (
+                    <div className="col" style={{ padding: "10px" }}>
+                      <button
+                        id={ticket.id.toString()}
+                        style={{ background: "gray" }}
+                        disabled={ticket.redeemed}
+                        className="btn btn-primary"
+                        onClick={() => selectTicket(ticket)}
+                      >
+                        Ticket ID: {ticket.id}
+                      </button>
+                    </div>
+                  )}
+              </React.Fragment>
+            ))}
+          </div>
+          <div className="row">
+            {ticketsList.map((ticket) => (
+              <React.Fragment key={ticket.id}>
+                {ticket.movie_id == Number(selectedMovie?.id) &&
+                  ticket.id - 20 * ticket.movie_id <= 9 &&
+                  ticket.id - 20 * ticket.movie_id > 4 && (
+                    <div className="col" style={{ padding: "10px" }}>
+                      <button
+                        id={ticket.id.toString()}
+                        style={{ background: "gray" }}
+                        disabled={ticket.redeemed}
+                        className="btn btn-primary"
+                        onClick={() => selectTicket(ticket)}
+                      >
+                        Ticket ID: {ticket.id}
+                      </button>
+                    </div>
+                  )}
+              </React.Fragment>
+            ))}
+          </div>
+          <div className="row">
+            {ticketsList.map((ticket) => (
+              <React.Fragment key={ticket.id}>
+                {ticket.movie_id == Number(selectedMovie?.id) &&
+                  ticket.id - 20 * ticket.movie_id <= 14 &&
+                  ticket.id - 20 * ticket.movie_id > 9 && (
+                    <div className="col" style={{ padding: "10px" }}>
+                      <button
+                        id={ticket.id.toString()}
+                        style={{ background: "gray" }}
+                        disabled={ticket.redeemed}
+                        className="btn btn-primary"
+                        onClick={() => selectTicket(ticket)}
+                      >
+                        Ticket ID: {ticket.id}
+                      </button>
+                    </div>
+                  )}
+              </React.Fragment>
+            ))}
+          </div>
+          <div className="row">
+            {ticketsList.map((ticket) => (
+              <React.Fragment key={ticket.id}>
+                {ticket.movie_id == Number(selectedMovie?.id) &&
+                  ticket.id - 20 * ticket.movie_id <= 19 &&
+                  ticket.id - 20 * ticket.movie_id > 14 && (
+                    <div className="col" style={{ padding: "10px" }}>
+                      <button
+                        id={ticket.id.toString()}
+                        style={{ background: "gray" }}
+                        disabled={ticket.redeemed}
+                        className="btn btn-primary"
+                        onClick={() => selectTicket(ticket)}
+                      >
+                        Ticket ID: {ticket.id}
+                      </button>
+                    </div>
+                  )}
+              </React.Fragment>
+            ))}
+          </div>
+          <div className="row">
+            <div className="col">
+              <button
+                onClick={() => purchaseTickets()}
+                className="btn btn-primary"
+              >
+                Purchase Selected Tickets
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      ) : (
+        <div className="main">
+          <h3>Tickets for {selectedMovie?.name}: </h3>
+          <div className="col">
+            {ticketsList.map((ticket) => (
+              <React.Fragment key={ticket.id}>
+                {ticket.movie_id == Number(selectedMovie?.id) && (
+                    <div className="col" style={{ padding: "10px" }}>
+                      <button
+                        id={ticket.id.toString()}
+                        style={{ background: "gray" }}
+                        disabled={ticket.redeemed}
+                        className="btn btn-primary"
+                        onClick={() => selectTicket(ticket)}
+                      >
+                        Ticket ID: {ticket.id}
+                      </button>
+                    </div>
+                  )}
+              </React.Fragment>
+            ))}
+          </div>
+         
+          <div className="row">
+            <div className="col">
+              <button
+                onClick={() => purchaseTickets()}
+                className="btn btn-primary"
+              >
+                Purchase Selected Tickets
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }

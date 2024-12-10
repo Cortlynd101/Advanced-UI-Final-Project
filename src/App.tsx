@@ -10,7 +10,11 @@ import Details from './components/Details'
 import UpcomingMovies from './components/UpcomingMovies'
 import PurchaseTickets from './components/PurchaseTickets'
 import Snacks from './components/Snacks'
-import UserInventory from './components/UserInventory'
+import SnackInventory from './components/SnackInventory'
+import TicketInventory from './components/TicketInventory'
+import TicketQRCode from './components/TicketQRCode'
+import SnackQRCode from './components/SnackQRCode'
+import Gallery from './components/Gallery'
 
 function App() {
   const auth = useAuth();
@@ -37,7 +41,11 @@ function App() {
         <Route path="/upcoming-movies" element={<UpcomingMovies />} />
         <Route path="/tickets" element={<PurchaseTickets />} />
         <Route path="/snacks" element={<Snacks />} />
-        <Route path="/user-inventory" element={<UserInventory />} />
+        <Route path="/snack-inventory" element={<SnackInventory />} />
+        <Route path="/ticket-inventory" element={<TicketInventory />} />
+        <Route path="/ticket-qr-code" element={<TicketQRCode />} />
+        <Route path="/snack-qr-code" element={<SnackQRCode />} />
+        <Route path="/gallery" element={<Gallery />} />
       </Routes>
     </>
   );

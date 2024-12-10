@@ -23,14 +23,6 @@ export const TicketsApiService = {
     await axios.post(`${baseUrl}`, newTicket);
   },
   modify: async (modifiedTicket: ApiTicket) => {
-    // await fetch(`${baseUrl}modify-ticket/` + `${modifiedTicket.id}`, {
-    //   method: "POST",
-    //   body: JSON.stringify(modifiedTicket),
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    // });
-
     await axios.put(
       `${baseUrl}modify-ticket/` + `${modifiedTicket.id}`,
       modifiedTicket
